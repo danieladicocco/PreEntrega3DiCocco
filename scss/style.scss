@@ -5,18 +5,48 @@
 }
 
 nav{
-    background-color: rgb(207, 207, 207);
+    background-color: black;
+    a{
+        color: rgb(207, 207, 207) !important;
+        img{
+            margin: 5px 20px 5px 5px;
+        }
+    }
+    .navbar-brand{
+        font-size: 28pt;
+    }
+    .navbar-toggler{
+        background-color: white !important;
+    }
 }   
 
 footer{
-    background-color: rgb(207, 207, 207);
-    color: black;
+    background-color: black;
+    color: rgb(207, 207, 207);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.main{
+    background-image: url(https://images.unsplash.com/photo-1554136545-2f288e8cf4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
+    color: white;
+    background-size: cover;
 }
 
 .call2{
     background-image: url(https://images.unsplash.com/photo-1558185348-c1e6420f12d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
     background-position: center;
     background-size: cover;
+    color: #445aa9;
+    h1{
+        font-weight: 900 !important;
+    }
+    .call2btn{
+        background-color: #6b7aad !important;
+    }
 }
 
 .jumbotron{
@@ -24,49 +54,119 @@ footer{
     padding-bottom: 5%;
 }
 
-.faq h1{
-    padding: 25px;
+.faq{
+    h1{
+        padding: 25px;  
+    }
 }
 
 /*Estilo Mobile*/
-@media (max-width: 992px){
-
+@media (max-width: 480px){
+    body{
+        margin-bottom: 25% !important;
+    }
     /*INDEX*/
     .main{
-        background-image: url(https://images.unsplash.com/photo-1554136545-2f288e8cf4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
-        color: white;
-        background-size: cover;
-    }
-    .main h2{
-        padding-top: 25px;
-        text-align: center;
-    }
-
-    .main p{
-        padding: 25px;
-        text-align: center;
+        h2{
+            padding-top: 25px;
+            text-align: center; 
+        }
+        p{
+            padding: 25px;
+            text-align: center;
+        }
     }
 
     .eventos{
         text-align: center;
-    }
-
-    .ev{
-        text-align: center;
-    }
-
-    .ev p{
-        text-align: justify;
-        padding: 10px;
+        .ev{
+            text-align: center;
+            p{
+                text-align: justify;
+                padding: 10px;
+            }
+        }
     }
 
     /*FAQ*/
-    .faq h1{
-        text-align: center;
+    .faq{
+        h1{
+            text-align: center;
+        }
+
+        img{
+        display: none;
+        }
     }
 
-    .faq img{
-        display: none;
+    /*PORTAFOLIO*/
+    .portafolio{
+        padding: 25px;
+        .img{
+            margin-bottom: 15px;
+            .vert{
+                margin-left: 10%;
+            }
+        }
+    }
+}
+
+/*ESTILO TABLETS*/
+@media (min-width:480px){
+    /*INDEX*/
+    .main{
+        h2{
+            padding-top: 25px !important;
+            text-align: center; 
+            color: black;
+        }
+        p{
+            color: white;
+            padding: 25px !important;
+            text-align: center;
+        }
+    }
+    .eventos{
+        height: 40%;
+        text-align: center;
+    .ev{
+        text-align: center;
+            p{
+                text-align: justify;
+                padding: 10px;
+            }
+        }
+    }
+
+    .call2{
+        margin-top: 20px;
+        height: 600px;
+    }
+    /*FAQ*/
+    .faq{
+        h1{
+            text-align: center;
+        }
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+    }
+    /*PORTAFOLIO*/
+    .main-port{
+        margin-bottom: 15%;
+        .portafolio{
+            padding: 25px;
+            align-items: center;
+            .img{
+                
+                margin-bottom: 15px;
+                max-width: 100%;
+                height: auto;
+            }
+        }
     }
 
 }
@@ -74,38 +174,23 @@ footer{
 
 /*Estilo Desktop*/
 @media (min-width: 992px){
-    body{
-        padding-bottom: 97px;
-    }
-    
     /*NAV*/
     .navbar-nav{
         margin-left: auto; 
     }
 
-    .navbar-nav .nav-link{
-        color: black;
-    }
-    
-
     /*FOOTER*/
-    footer{
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-    }
 
-    footer .social{
-        padding-left: 350px;
-        padding-top: 50px;
-    }
-    
-    footer .footer-text{
+    footer{
+        .social{
+            padding-left: 350px;
+            padding-top: 50px;
+        } 
+        .footer-text{
         padding-left: 10px;
         padding-top: 10px;
+        } 
     }
-
     /*INDEX*/
     /*MAIN*/
     .main{
@@ -125,66 +210,74 @@ footer{
         background-color: rgb(207, 207, 207);
         height: 600px;
         justify-content: center;
+        h1{
+            padding: 25px;
+        }  
+        p{
+            background-color: #6b7aad;
+            padding: 10px;
+        } 
+        .eventos{
+            margin-top: 10px;
+            display: inline-block;
+            img{
+                border: 3px solid #6b7aad;
+                margin-left: 120px;
+                margin-right: 120px;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                width:250px; 
+                height:250px;
+                &:hover{
+                    transform: scale(0.75, 0.75);
+                }
+            }
+            .et{
+            display: inline;
+            text-align: center;
+            }
+        }    
     }
-    
-    .ev h1{
-        padding: 25px;
-    }    
-
-    .ev p{
-        background-color: rgb(209, 193, 173);
-        padding: 10px;
-    }
-    .eventos{
-        margin-top: 10px;
-        display: inline-block;
-    }
-    
-    .et{
-        display: inline;
-        text-align: center;
-    }
-    
-    
-    .eventos img{
-        border: 3px solid #6b7aad;
-        margin-left: 120px;
-        margin-right: 120px;
-        margin-top: 30px;
-        margin-bottom: 15px;
-        width:250px; 
-        height:250px;
-    }
-
-    .eventos img:hover{
-        transform: scale(0.75, 0.75);
-    }
-    
     /*JUMBOTRON CALL2ACTION*/
     .call2{
-        color: rgb(185, 185, 185);
-        font-weight: bold;
-        height: 500px;
+        height: 600px;
+        opacity: 0.90;
         background-image: url(https://images.unsplash.com/photo-1558185348-c1e6420f12d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
         background-position: center;
         background-size: cover;
         padding: 150px;
-    }
-
-    .call2:hover{
-        opacity: 0.90;
+        h1{
+            font-weight: 900 !important;
+            font-size: 70pt;
+        }
+        &:hover{
+            opacity: 1; 
+        }
     }
 
     .jumbotron{
+        margin-top: 0;
         padding-bottom: 500px;
-    }
-    .jumbotron .container{
-        text-align: center;
+        .container{
+            text-align: center;
+        }
     }
     
     /*FIN DE LA PAGINA INDEX*/
 
-    /*INICIO DE LA PAGINA FAQ*/
-
+    /*INICIO DE LA PAGINA PORTAFOLIO*/
+    .main-port{
+        margin-bottom: 97px;
+    }
+    .portafolio{
+        padding: 15px;
+        .img{
+        margin-top: 15px;
+        margin-bottom: 15px;
+            .vert{
+                margin-left: 70px;
+            }
+        }
+    }
 }
 
