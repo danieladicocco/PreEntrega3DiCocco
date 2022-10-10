@@ -46,32 +46,52 @@
         </nav>
     </header>
 <!--Inicio del contenido principal-->
-    <main>
-        <br><br>
+    <main class="main-contacto">
         <!--Inicio del form-->
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre"> 
-            <br>
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido">
-            <br>
-            <p>Tipo de evento:</p>
-            <input type="radio" id="boda" name="tipodeevento" value="evento">
-            <label for="boda">Boda</label><br>
-            <input type="radio" id="grad" name="tipodeevento" value="graduacion">
-            <label for="graduacion">Graduacion</label><br>
-            <input type="radio" id="concierto" name="tipodeevento" value="concierto">
-            <label for="concierto">Concierto</label>
-            <br>
-            <br>
-            <label for="mensaje">Mensaje:</label>
-            <textarea name="mensaje" id="" cols="30" rows="10"></textarea> 
-            <br>
-            <input type="submit" value="Submit">
-            <input type="reset" value="reset">
+        <h1>Contáctanos</h1>
+        <form action="">
+            <div class="container-fluid">
+                <div class="row formulario">
+                    <div class="col-lg-6 col-md-6 mb-3">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Jose" value="" required>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-3">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="Perez" value="" required>
+                    </div>
+                </div>
+                <div class="row formulario">
+                    <div class="col-lg-6">
+                        <label for="emailcliente">Email de contacto:</label>
+                        <input type="email" class="form-control" id="emailcliente" placeholder="nombre@-mail.com">  
+                    </div>
+                    <div class="col-lg-6 selecEventos">
+                        <label for="selectorEvento" class="selecEventos-item">Tipo de evento:</label>
+                        <div class="form-check form-check-inline selecEventos-item">
+                            <input class="form-check-input" type="radio" name="selectorEvento" id="eventoboda" value="boda">
+                            <label class="form-check-label" for="eventoboda">Boda.</label>
+                        </div>
+                        <div class="form-check form-check-inline selecEventos-item">
+                            <input class="form-check-input" type="radio" name="selectorEvento" id="eventoconcierto" value="concierto">
+                            <label class="form-check-label" for="eventoconcierto"> Concierto.</label>
+                        </div>
+                        <div class="form-check form-check-inline selecEventos-item">
+                            <input class="form-check-input" type="radio" name="selectorEvento" id="eventograduacion" value="graduacion">
+                            <label class="form-check-label" for="eventograduacion"> Graduación.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row formulario">
+                    <div class="form-group col-lg-12">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea class="form-control" id="mensaje" rows="3" placeholder="Comentanos qué servicio quieres y cuales paquetes deseas obtener"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+                <button type="reset" class="btn btn-reset">Borrar</button>
+            </div>
         </form>
-
         
         <!--fin del form-->
     </main>

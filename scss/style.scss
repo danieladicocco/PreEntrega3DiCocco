@@ -76,6 +76,7 @@ footer{
 .faq{
     h1{
         padding: 25px;  
+        text-align: center;
     }
 }
 
@@ -85,9 +86,39 @@ footer{
     padding: 35px;
     .integrante{
         background-color: $gray;
+        .card-title{
+            background-color: $babyblue;
+        }
+        .card-text{
+            text-align: justify;
+        }
     }
+
 }
 
+/*CONTACTO*/
+.main-contacto{
+    padding: 50px;
+    h1{
+        margin-bottom: 25px;
+    }
+    .formulario{
+        margin-bottom: 25px;
+            .selecEventos-item{
+                margin-left: 10px;
+                padding: 25px;
+            }
+        }
+    .form-control{
+        border-color: black;
+    }
+    .btn{
+        border-color: black;
+    }
+    .form-check-input{
+        border-color: black;
+    }
+} 
 
 
 /*Estilo Mobile*/
@@ -120,10 +151,6 @@ footer{
 
     /*FAQ*/
     .faq{
-        h1{
-            text-align: center;
-        }
-
         img{
         display: none;
         }
@@ -151,7 +178,7 @@ footer{
 }
 
 /*ESTILO TABLETS*/
-@media (min-width:480px){
+@media (min-width:480px) and (max-width: 900px)  {
     /*INDEX*/
     .main{
         h2{
@@ -182,9 +209,6 @@ footer{
     }
     /*FAQ*/
     .faq{
-        h1{
-            text-align: center;
-        }
         img{
             display: block;
             margin-left: auto;
@@ -330,6 +354,7 @@ footer{
         margin-bottom: 97px;
         h1{
             margin-bottom: 25px;
+            text-align: center;
         }
         .integrante{
             margin: 50px !important;
@@ -344,6 +369,10 @@ footer{
             padding-bottom: 25px;
         }
     }
-    
+    /*CONTACTO*/
+    .btn-reset{
+        margin-left: 25px;
+    }
+
 }
 

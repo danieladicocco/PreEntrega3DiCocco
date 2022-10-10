@@ -51,13 +51,35 @@ footer {
 
 /*FAQ*/
 .faq h1 {
-  padding: 25px; }
+  padding: 25px;
+  text-align: center; }
 
 /*ABOUT*/
 .about {
   padding: 35px; }
   .about .integrante {
     background-color: #cfcfcf; }
+    .about .integrante .card-title {
+      background-color: #6b7aad; }
+    .about .integrante .card-text {
+      text-align: justify; }
+
+/*CONTACTO*/
+.main-contacto {
+  padding: 50px; }
+  .main-contacto h1 {
+    margin-bottom: 25px; }
+  .main-contacto .formulario {
+    margin-bottom: 25px; }
+    .main-contacto .formulario .selecEventos-item {
+      margin-left: 10px;
+      padding: 25px; }
+  .main-contacto .form-control {
+    border-color: black; }
+  .main-contacto .btn {
+    border-color: black; }
+  .main-contacto .form-check-input {
+    border-color: black; }
 
 /*Estilo Mobile*/
 @media (max-width: 480px) {
@@ -80,8 +102,6 @@ footer {
   /*FAQ*/
   .faq {
     margin-bottom: 120px; }
-    .faq h1 {
-      text-align: center; }
     .faq img {
       display: none; }
   /*PORTAFOLIO*/
@@ -97,7 +117,7 @@ footer {
     padding: 10px; } }
 
 /*ESTILO TABLETS*/
-@media (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 900px) {
   /*INDEX*/
   .main h2 {
     padding-top: 25px !important;
@@ -118,8 +138,6 @@ footer {
     margin-top: 20px;
     height: 600px; }
   /*FAQ*/
-  .faq h1 {
-    text-align: center; }
   .faq img {
     display: block;
     margin-left: auto;
@@ -218,7 +236,8 @@ footer {
   .about {
     margin-bottom: 97px; }
     .about h1 {
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      text-align: center; }
     .about .integrante {
       margin: 50px !important; }
       .about .integrante img {
@@ -226,4 +245,7 @@ footer {
     .about .card-title {
       text-align: center; }
     .about .card-text {
-      padding-bottom: 25px; } }
+      padding-bottom: 25px; }
+  /*CONTACTO*/
+  .btn-reset {
+    margin-left: 25px; } }
