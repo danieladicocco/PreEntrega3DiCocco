@@ -1,3 +1,8 @@
+
+$gray:rgb(207, 207, 207);
+$babyblue:#6b7aad;
+
+/*ESTILOS GENERALES*/
 * {
     font-family: 'Roboto', sans-serif;
     padding: 0px;
@@ -7,7 +12,7 @@
 nav{
     background-color: black;
     a{
-        color: rgb(207, 207, 207) !important;
+        color: $gray !important;
         img{
             margin: 5px 20px 5px 5px;
         }
@@ -16,13 +21,13 @@ nav{
         font-size: 28pt;
     }
     .navbar-toggler{
-        background-color: white !important;
+        background-color: $gray !important;
     }
 }   
 
 footer{
     background-color: black;
-    color: rgb(207, 207, 207);
+    color: $gray;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -30,22 +35,34 @@ footer{
     
 }
 
+/*INDEX*/
+
 .main{
-    background-image: url(https://images.unsplash.com/photo-1554136545-2f288e8cf4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
-    color: white;
+    background: url("../img/mainpic.png");
+    color: $gray;
     background-size: cover;
+    background-position: center;
+    .maintext{
+        h2{
+            color: $gray;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    }
 }
 
 .call2{
-    background-image: url(https://images.unsplash.com/photo-1558185348-c1e6420f12d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-image: url("../img/jumbopic.png");
     background-position: center;
     background-size: cover;
-    color: #445aa9;
+    color: $gray;
     h1{
         font-weight: 900 !important;
     }
     .call2btn{
-        background-color: #6b7aad !important;
+        background-color: $babyblue !important;
     }
 }
 
@@ -54,11 +71,24 @@ footer{
     padding-bottom: 5%;
 }
 
+/*FAQ*/
+
 .faq{
     h1{
         padding: 25px;  
     }
 }
+
+/*ABOUT*/
+
+.about{
+    padding: 35px;
+    .integrante{
+        background-color: $gray;
+    }
+}
+
+
 
 /*Estilo Mobile*/
 @media (max-width: 480px){
@@ -97,6 +127,7 @@ footer{
         img{
         display: none;
         }
+        margin-bottom: 120px;
     }
 
     /*PORTAFOLIO*/
@@ -109,6 +140,14 @@ footer{
             }
         }
     }
+
+    /*ABOUT*/
+    .about{
+        .integrante{
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+    }
 }
 
 /*ESTILO TABLETS*/
@@ -117,8 +156,7 @@ footer{
     .main{
         h2{
             padding-top: 25px !important;
-            text-align: center; 
-            color: black;
+            text-align: center;
         }
         p{
             color: white;
@@ -156,17 +194,23 @@ footer{
     }
     /*PORTAFOLIO*/
     .main-port{
+        overflow-x: hidden;
         margin-bottom: 15%;
-        .portafolio{
-            padding: 25px;
-            align-items: center;
-            .img{
-                
-                margin-bottom: 15px;
-                max-width: 100%;
-                height: auto;
+        .port{
+            .portafolio{
+                padding: 25px;
+                .img{
+                    margin-left: 160px;
+                    margin-bottom: 15px;
+                    margin-right: 0px;
+                    max-width: 100%;
+                }
+                .imgvert{
+                    margin-left: 225px !important;
+                }
             }
         }
+        
     }
 
 }
@@ -191,17 +235,20 @@ footer{
         padding-top: 10px;
         } 
     }
+
     /*INDEX*/
     /*MAIN*/
     .main{
-        background-image: url(https://images.unsplash.com/photo-1554136545-2f288e8cf4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
-        background-position: center;
-        background-size: cover;
-        text-align: center;
-        padding: 250px;
-        height: 2em;
-        color: white;
-        font-size: 2em;
+        height: 525px;
+        .maintext{
+            padding-top: 150px;
+            h2{
+                font-size: 50pt;
+            }
+            p{
+                font-size: 30pt;
+            }
+        }
     }
     
 
@@ -238,11 +285,11 @@ footer{
             }
         }    
     }
+
     /*JUMBOTRON CALL2ACTION*/
     .call2{
         height: 600px;
         opacity: 0.90;
-        background-image: url(https://images.unsplash.com/photo-1558185348-c1e6420f12d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
         background-position: center;
         background-size: cover;
         padding: 150px;
@@ -262,8 +309,6 @@ footer{
             text-align: center;
         }
     }
-    
-    /*FIN DE LA PAGINA INDEX*/
 
     /*INICIO DE LA PAGINA PORTAFOLIO*/
     .main-port{
@@ -279,5 +324,26 @@ footer{
             }
         }
     }
+
+    /*ABOUT*/
+    .about{
+        margin-bottom: 97px;
+        h1{
+            margin-bottom: 25px;
+        }
+        .integrante{
+            margin: 50px !important;
+            img{
+                padding: 50px 50px 0px 50px;
+            }
+        }
+        .card-title{
+            text-align: center;
+        }
+        .card-text{
+            padding-bottom: 25px;
+        }
+    }
+    
 }
 

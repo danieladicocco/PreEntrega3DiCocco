@@ -1,3 +1,4 @@
+/*ESTILOS GENERALES*/
 * {
   font-family: 'Roboto', sans-serif;
   padding: 0px;
@@ -12,7 +13,7 @@ nav {
   nav .navbar-brand {
     font-size: 28pt; }
   nav .navbar-toggler {
-    background-color: white !important; }
+    background-color: #cfcfcf !important; }
 
 footer {
   background-color: black;
@@ -22,16 +23,23 @@ footer {
   bottom: 0;
   width: 100%; }
 
+/*INDEX*/
 .main {
-  background-image: url(https://images.unsplash.com/photo-1554136545-2f288e8cf4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
-  color: white;
-  background-size: cover; }
+  background: url("../img/mainpic.png");
+  color: #cfcfcf;
+  background-size: cover;
+  background-position: center; }
+  .main .maintext h2 {
+    color: #cfcfcf;
+    text-align: center; }
+  .main .maintext p {
+    text-align: center; }
 
 .call2 {
-  background-image: url(https://images.unsplash.com/photo-1558185348-c1e6420f12d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-image: url("../img/jumbopic.png");
   background-position: center;
   background-size: cover;
-  color: #445aa9; }
+  color: #cfcfcf; }
   .call2 h1 {
     font-weight: 900 !important; }
   .call2 .call2btn {
@@ -41,8 +49,15 @@ footer {
   padding-top: 5%;
   padding-bottom: 5%; }
 
+/*FAQ*/
 .faq h1 {
   padding: 25px; }
+
+/*ABOUT*/
+.about {
+  padding: 35px; }
+  .about .integrante {
+    background-color: #cfcfcf; }
 
 /*Estilo Mobile*/
 @media (max-width: 480px) {
@@ -63,25 +78,30 @@ footer {
         text-align: justify;
         padding: 10px; }
   /*FAQ*/
-  .faq h1 {
-    text-align: center; }
-  .faq img {
-    display: none; }
+  .faq {
+    margin-bottom: 120px; }
+    .faq h1 {
+      text-align: center; }
+    .faq img {
+      display: none; }
   /*PORTAFOLIO*/
   .portafolio {
     padding: 25px; }
     .portafolio .img {
       margin-bottom: 15px; }
       .portafolio .img .vert {
-        margin-left: 10%; } }
+        margin-left: 10%; }
+  /*ABOUT*/
+  .about .integrante {
+    margin-bottom: 20px;
+    padding: 10px; } }
 
 /*ESTILO TABLETS*/
 @media (min-width: 480px) {
   /*INDEX*/
   .main h2 {
     padding-top: 25px !important;
-    text-align: center;
-    color: black; }
+    text-align: center; }
   .main p {
     color: white;
     padding: 25px !important;
@@ -107,14 +127,17 @@ footer {
     margin-bottom: 20px; }
   /*PORTAFOLIO*/
   .main-port {
+    overflow-x: hidden;
     margin-bottom: 15%; }
-    .main-port .portafolio {
-      padding: 25px;
-      align-items: center; }
-      .main-port .portafolio .img {
+    .main-port .port .portafolio {
+      padding: 25px; }
+      .main-port .port .portafolio .img {
+        margin-left: 160px;
         margin-bottom: 15px;
-        max-width: 100%;
-        height: auto; } }
+        margin-right: 0px;
+        max-width: 100%; }
+      .main-port .port .portafolio .imgvert {
+        margin-left: 225px !important; } }
 
 /*Estilo Desktop*/
 @media (min-width: 992px) {
@@ -131,14 +154,13 @@ footer {
   /*INDEX*/
   /*MAIN*/
   .main {
-    background-image: url(https://images.unsplash.com/photo-1554136545-2f288e8cf4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    padding: 250px;
-    height: 2em;
-    color: white;
-    font-size: 2em; }
+    height: 525px; }
+    .main .maintext {
+      padding-top: 150px; }
+      .main .maintext h2 {
+        font-size: 50pt; }
+      .main .maintext p {
+        font-size: 30pt; }
   /*SECCION EVENTOS*/
   .ev {
     background-color: #cfcfcf;
@@ -169,7 +191,6 @@ footer {
   .call2 {
     height: 600px;
     opacity: 0.90;
-    background-image: url(https://images.unsplash.com/photo-1558185348-c1e6420f12d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
     background-position: center;
     background-size: cover;
     padding: 150px; }
@@ -183,7 +204,6 @@ footer {
     padding-bottom: 500px; }
     .jumbotron .container {
       text-align: center; }
-  /*FIN DE LA PAGINA INDEX*/
   /*INICIO DE LA PAGINA PORTAFOLIO*/
   .main-port {
     margin-bottom: 97px; }
@@ -193,4 +213,17 @@ footer {
       margin-top: 15px;
       margin-bottom: 15px; }
       .portafolio .img .vert {
-        margin-left: 70px; } }
+        margin-left: 70px; }
+  /*ABOUT*/
+  .about {
+    margin-bottom: 97px; }
+    .about h1 {
+      margin-bottom: 25px; }
+    .about .integrante {
+      margin: 50px !important; }
+      .about .integrante img {
+        padding: 50px 50px 0px 50px; }
+    .about .card-title {
+      text-align: center; }
+    .about .card-text {
+      padding-bottom: 25px; } }
