@@ -155,7 +155,14 @@ footer {
         margin-right: 0px;
         max-width: 100%; }
       .main-port .port .portafolio .imgvert {
-        margin-left: 225px !important; } }
+        margin-left: 225px !important; }
+  /*ABOUT*/
+  .about {
+    margin-bottom: 100px; }
+    .about .integrante {
+      margin-bottom: 20px;
+      padding: 10px;
+      margin-left: 50px; } }
 
 /*Estilo Desktop*/
 @media (min-width: 992px) {
